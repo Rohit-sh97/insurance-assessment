@@ -1,0 +1,37 @@
+{
+  "name": "insurance-assessment",
+  "version": "1.0.0",
+  "description": "Production-style Node.js insurance backend: CSV/XLSX import via Worker Threads, policy APIs, CPU monitoring, and scheduled messages.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "pm2:start": "pm2 start src/server.js --name insurance-api",
+    "pm2:logs": "pm2 logs insurance-api",
+    "pm2:stop": "pm2 stop insurance-api",
+    "pm2:restart": "pm2 restart insurance-api",
+    "pm2:delete": "pm2 delete insurance-api"
+  },
+  "keywords": [
+    "express",
+    "mongodb",
+    "mongoose",
+    "worker-threads",
+    "insurance"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "pm2": "^5.4.3",
+    "systeminformation": "^5.23.23",
+    "xlsx": "^0.18.5"
+  }
+}
